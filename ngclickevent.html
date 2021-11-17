@@ -1,0 +1,46 @@
+<html>
+
+       <head>
+	   
+	   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	   
+	   </head>
+	   
+	   
+	   <body ng-app="mymodule">
+	   
+	       <!--ng-click event example -->
+		   
+		   <h3>ng-click event example:</h3>
+			<div ng-controller="mycontroller">
+			
+			  Enter Password:
+			  <input type="password" ng-model="password"><br>
+			  <br>
+			  
+			  <button ng-click="message(password)">Show Password</button>
+			
+			</div>
+
+       </body>
+
+</html>
+
+<script>
+
+var app=angular.module("mymodule",[]);
+
+var c=function($scope)
+  {
+
+	$scope.message=function(value)
+      {
+	  
+           alert(value);
+     }		    
+
+  }
+ 
+app.controller("mycontroller",c);
+
+</script>
